@@ -27,10 +27,49 @@ void input() {
 	cout << "Masukan Elemen Dara" << endl;
 	cout << "=======================================" << endl;
 	
-	for (int i = 0; i < n; i++) {
-		cout << "Data ke-" << (i + 1) << ": ";
-		cin >> dara[i];
+	for (int j = 0; j < n-1; j++) {
+		cout << "Data ke-" << (j + 1) << ": ";
+		cin >> dara[j];
 	}
 }
+
+void selectionSort() {
+	int minindex, j, i;
+	do {
+		for (int i = 0; j <= n - 1 - minindex; i++) {
+			if (dara[i] > dara[j + 1]) {
+				int temp;
+				temp = dara[i];
+				dara[i] = dara[i + 1];
+				dara[i + 1] = temp;
+
+			}
+			
+		}
+		minindex = minindex + 1;
+	} while (minindex <= n - 1);
+
+}
+void display() {
+	cout << endl;
+	cout << "===================" << endl;
+	cout << "Element Dara yang telah tersusun" << endl;
+	cout << "===================" << endl;
+	for (int i = 0; i < n; i++) {
+		cout << dara[i] << endl;
+	}
+	cout << "Jumlah pass = " << n - 1 << endl;
+	cout << endl;
+}
+
+int main() {
+	input();
+	selectionSort();
+	display();
+	system("pause");
+
+	return 0;
+}
+
 
 
