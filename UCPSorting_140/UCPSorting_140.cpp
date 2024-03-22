@@ -9,8 +9,28 @@
 
 #include <iostream>
 using namespace std;
-int d[40];
+int dara[40];
 int n;
 
+void input() {
+	while (true) {
+		cout << "Masukan banyak elemen pada dara : ";
+		cin >> n;
+		if (n <= 40)
+			break;
+		else {
+			cout << "\nDara dapat mempunyai maksimal 40 elemen.\n";
+		}
+	}
+	cout << endl;
+	cout << "=======================================" << endl;
+	cout << "Masukan Elemen Dara" << endl;
+	cout << "=======================================" << endl;
+	
+	for (int i = 0; i < n; i++) {
+		cout << "Data ke-" << (i + 1) << ": ";
+		cin >> dara[i];
+	}
+}
 
 
